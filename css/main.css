@@ -8,17 +8,17 @@ html {
 }
 :root {
   --color1: #2F4858;
-  --color2: #5C6477;
-  --color3: #878293;
-  --color4: #B0A2AE;
-  --color5: #D6C5CA;
-  --color6: #F9EBEA;
-  --background: background-image: linear-gradient(to left bottom, #2f4858, #455668, #5b6477, #717385, #878293);
+  --color2: #3A6574;
+  --color3: #48848D;
+--background: #5CA3A2;
+  --color4: #79C3B2;
+  --color5: #9FE2BF;
+  
 }
 body {
-  background-image: linear-gradient(to left bottom, #2f4858, #455668, #5b6477, #717385, #878293);
+  background-color: var(--background);
   height: 100vh;
-  /* background-color: var(--color2); */
+  /* background-color: var(--color1); */
   color: var(--color6);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
@@ -53,6 +53,42 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+/* //// Search box */
+.container .main .main-input {
+  width: 450px;
+  height: 30px;
+  background-color: var(--background);
+  border: 1px solid var(--color5);
+  border-radius: 100px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.container .main .main-input input {
+  width: 350px;
+  margin: 0 15px;
+  border: none;
+  outline: none;
+  background-color: var(--background);
+}
+.container .main .main-input img {
+  width: 15px;
+}
+/* //// Buttons */
+.container .main .buttons-bellow {
+  width:300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container .main .buttons-bellow button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color:#9fe2bf71;
+  color: white;
+}
+
+
 
 /* /// FOOTER /// */
 .container .footer {
@@ -75,10 +111,4 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-
-
-
-.main .main-input .search-container img {
-  width: 15px;
 }
