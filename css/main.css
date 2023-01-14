@@ -18,18 +18,20 @@ html {
 body {
   background-color: var(--background);
   height: 100vh;
-  /* background-color: var(--color1); */
   color: var(--color6);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
 }
+
+/* ///// CONTAINER GLOBAL ///// */
 .container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 /* /// HEADER /// */
 .container .header nav {
   color: var(--color1);
@@ -38,6 +40,9 @@ body {
 }
 .header li {
   cursor: pointer;
+}
+.header li:hover {
+  color: var(--color5);
 }
 .container .header .nav-right {
   width: 250px;
@@ -57,13 +62,12 @@ body {
 }
 .container .header .nav-right .profile-icon:hover {
   transition: 0.5s ease-out;
-  border: 2px solid var(--color5);
-
+  border: 3px solid var(--color5);
 }
-
 
 /* /// MAIN /// */
 .container .main {
+  margin: auto;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -71,18 +75,20 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+
 /* //// Search box */
 .container .main .main-input {
-  width: 450px;
+  width: 500px;
   height: 40px;
   background-color: var(--background);
   border: 1px solid var(--color5);
   border-radius: 100px;
   margin: 30px 0;
+  padding: 0 20px;
   display: flex;
   justify-content: center;
   transition: 0.5s ease-out;
-
 }
 .container .main .main-input:hover {
   background-color: var(--color2);
@@ -90,7 +96,7 @@ body {
   box-shadow: 0px 0px 35px var(--color5);
 }
 .container .main .main-input input {
-  width: 350px;
+  width: 100%;
   margin: 0 15px;
   border: none;
   outline: none;
@@ -130,26 +136,32 @@ body {
 
 
 /* /// FOOTER /// */
-
 .container .footer {
   width: 100%;
   height: 60px;
   background-color: var(--color3);
   color: var(--color5);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .footer li {
   cursor: pointer;
 }
+.footer li:hover {
+  color: var(--color1);
+}
+
+/* //// Left menu */
 .container .footer .left-footer {
   width: 400px;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
 }
+
+/* //// Right menu */
 .container .footer .right-footer {
   width: 300px;
   list-style: none;
@@ -159,3 +171,15 @@ body {
 }
 
 
+/* ///// MEDIA QUERIES ///// */
+@media (max-width: 690px) {
+  .container .footer {
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  padding: 20px 0;
+  }
+  .container .main .main-input {
+    width: 80vw;
+  }
+}
